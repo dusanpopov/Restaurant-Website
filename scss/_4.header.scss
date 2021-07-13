@@ -1,0 +1,79 @@
+.main-header{
+    background-color: var(--color-secondary);
+    grid-column: container-start / container-end;
+
+    &.open .main-header__line{
+        background-color: transparent;
+    }
+    &.open .main-header__line::before{
+        transform: rotate(45deg);
+    }
+    &.open .main-header__line::after{
+        transform: rotate(-45deg);
+    }
+
+    &.open .main-header__line::before,
+    &.open .main-header__line::after{
+        top: 0;
+    }
+
+    &__overlay{
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-secondary-m);
+        position: fixed;
+        opacity: 0;
+        display: none;
+        z-index: 200;
+    }
+    
+}
+
+// Mixins
+
+@include media-tablet{
+    .main-header.open .main-navbar{
+        transform: rotateY(0);
+    }
+
+    .main-header__menu{
+             height: 4rem;
+            width: 4rem;
+            position: fixed;
+            right: 2rem;
+            padding: 2.5rem;
+            z-index: 200;
+            cursor: pointer;
+    }
+
+    .main-header__line,
+    .main-header__line::before,
+    .main-header__line::after{
+        content: "";
+        position: absolute;
+        width: 3.5rem;
+        height: 2px;
+        background-color: $color-white;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .main-header__line::before{
+        top: -2.2rem;
+    }
+
+    .main-header__line::after{
+        top: 2.2rem;
+    }
+
+    .main-header__overlay.open{
+        display: block;
+        opacity: 0.8;
+        z-index: 20;
+    }
+}
+

@@ -1,0 +1,83 @@
+.container {
+    display: grid;
+    grid-template-columns: [container-start] 1fr [center-start] 
+    repeat(6,[col-start] minmax(min-content, 16.66667rem) [col-end])
+    [center-end] 1fr [container-end];
+    grid-template-rows: min-content 90vh repeat(9, min-content);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: $font-color-primary;
+    font-weight: font-weight(font-weight-light);
+    letter-spacing: .2rem;
+    font-size: font-size(font-size-small);
+}
+
+// Placeholder styles
+
+// Background image properties
+
+%bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// Section padding
+
+%section-padding{
+    padding: 6vh 4vw;
+}
+
+// Section heading
+
+%section-heading{
+    font-size: font-size(font-size-medium);
+    font-weight: font-weight(font-weight-light);
+    letter-spacing: .2rem;
+}
+
+// Section paragraph
+
+%section-paragraph{
+    font-size: font-size(font-size-small);
+    letter-spacing: .2rem;
+}
+
+%section-h3{
+    font-size: font-size(font-size-small);
+    color: var(--color-tertiary);
+}
+
+// Scroll button
+
+.scroll-btn{
+    position: fixed;
+    bottom: 70rem;
+    right: 4rem;
+    height: 4rem;
+    width: 4rem;
+    background-image: url("../images/svg/up-arrow.svg");
+    background-repeat: no-repeat;
+    background-color: rgb(158, 158, 158);
+    background-size: contain;
+    background-position: center;
+    padding: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 30;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s cubic-bezier(1, 0, 0, 1);
+}
+
+.scroll-btn.active{
+    visibility: visible;
+    opacity: 1;
+    bottom: 4rem;
+}
