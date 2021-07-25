@@ -1,8 +1,6 @@
 .team{
     @extend %section-padding;
-    // padding-right: 0 !important;
-    // padding-left: 0 !important;
-
+    
     &__title{
         @extend %section-heading;
         text-align: center;
