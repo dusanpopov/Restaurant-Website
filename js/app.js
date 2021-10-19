@@ -35,7 +35,4 @@ checkboxToggleElement.addEventListener("change", () => {
     }
 });
 
-
 menuElement.addEventListener("click", toggleNavigation);
-
-
