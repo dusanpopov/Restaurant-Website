@@ -30,7 +30,6 @@
 }
 
 // Mixins
-
 @include media-tablet{
     .main-header.open .main-navbar{
         transform: rotateY(0);
