@@ -110,7 +110,6 @@
 }
 
 // Mixins
-
 @include media-desktop{
     .main-navbar{
           &__item{
@@ -125,7 +124,6 @@
 }
 
 @include media-tablet{
-    // perspective: 70rem;
     .main-navbar{
         position: fixed;
         top: 0;
