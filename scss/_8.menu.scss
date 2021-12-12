@@ -42,7 +42,6 @@
         transition: transform 0.4s ease-in-out;
         transform-origin: right;
     }
-
   
     &__content:hover &__title::before{
        transform: scaleX(1);
