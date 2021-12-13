@@ -1,5 +1,4 @@
 .about{
-    // background-color: var(--color-tertiary-m);
     grid-column: container-start / container-end;
     background-image: url("../images/about-background.jpg");
     @extend %bg;
