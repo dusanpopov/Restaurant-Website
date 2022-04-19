@@ -6,7 +6,6 @@
     ),url("../images/showcase-background.jpg");
     @extend %bg;
     @extend %section-padding;
-    
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -43,7 +42,6 @@
         display: flex;
         justify-content: center;
         padding: calc(0.5rem + 1vh) calc(1rem + 1vw);
-       
     }
 
     &__button{
