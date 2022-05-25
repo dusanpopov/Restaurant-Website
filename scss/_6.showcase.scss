@@ -1,8 +1,8 @@
 .showcase{
     height: 90vh;
     background-image:linear-gradient(
-        var(--color-overlay),
-        var(--color-overlay)
+      var(--color-overlay),
+      var(--color-overlay)
     ),url("../images/showcase-background.jpg");
     @extend %bg;
     @extend %section-padding;
